@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: expanded # compressed # expanded
+
+# permalink and highlighter
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+# SEO settings
+title: dotX
+description: ""
+keywords: "personal blog, rajiv nair, engineering, science, politics, design, system, feminism, learning"
+
+# Site settings
+url: 
+baseurl: ""
+# baseurl: ""
+
+# Author settings
+author:
+  name      : Rajiv Nair
+  job       : Software Engineer
+  bio       : ""
+  thumb     : 
+  email     : rsnair2@me.com
+  url       : http://rsnair.me
+  github    : http://github.com/rsnair2
+  twitter   :
+  facebook  :
+  linkedin  : http://linkedin.com/in/rsnair93
+
+# google_analytics: UA-52446115-1
+repo: 
+
+# comments
+disqus_shortname: "rsnair2"
