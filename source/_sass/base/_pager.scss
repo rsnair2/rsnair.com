@@ -1,0 +1,39 @@
+.pager {
+	padding-left:0;
+	margin:20px 0;
+	text-align:center;
+	list-style:none
+}
+.pager li {
+	display:inline
+}
+
+.pager li>a,.pager li>span {
+	display:inline-block;
+	padding:5px 14px;
+	background-color:$white-color;
+	border:1px solid $primary-color;
+	border-radius:15px;
+	text-decoration: none;
+}
+
+.pager li>a:focus,.pager li>a:hover {
+	color: $white-color;
+	background-color: $primary-color;
+}
+
+.pager .next>a,.pager .next>span {
+	float:right
+}
+
+.pager .previous>a,.pager .previous>span {
+	float:left
+}
+
+.pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span {
+	color: $light-gray-color;
+	border-color: $light-gray-color;
+	cursor: not-allowed;
+	background-color: $white-color;
+}
+

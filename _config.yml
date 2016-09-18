@@ -16,6 +16,9 @@ permalink   : pretty
 markdown    : kramdown
 highlighter : pygments
 
+# pagination
+paginate: 5
+
 # SEO settings
 title: dotX
 description: ""

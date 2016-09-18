@@ -15,7 +15,7 @@ subtitle: what I'm writing..
     </div>
   </header>
 
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <article class="post-item container">
       <header>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -27,5 +27,21 @@ subtitle: what I'm writing..
       <p>{{ post.content | strip_html | truncatewords: 56 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
     </article>
   {% endfor %}
+
+
+<!-- Pagination links -->
+<ul class="pager">
+  {% if paginator.previous_page %}
+    <li><a href="{{paginator.previous_page_path}}">Previous</a></li>
+  {% else %}
+    <li class="disabled"><a>Previous</a></li>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <li><a href="{{paginator.next_page_path}}">Next</a></li>
+  {% else %}
+    <li class="disabled"><a>Next</a></li>
+  {% endif %}
+</ul>
 
 </section>
