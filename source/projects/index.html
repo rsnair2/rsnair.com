@@ -28,7 +28,12 @@ paginate:
         </h1>
       </header>
 
-      <p>{{ post.content | strip_html | truncatewords: 200 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
+      {% assign wordCount = post.content | number_of_words %}
+      {% if wordCount > 100 %}
+        <p>{{ post.content | strip_html | truncatewords: 100 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
+      {% else %}
+        <p>{{ post.content | strip_html }}</p> 
+      {% endif %}
 
       <div class="code-tags">
         <code> {{ post.tags }} </code>
