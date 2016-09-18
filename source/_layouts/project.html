@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header intro">
+    <div class="intro-in">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <h2 class="intro-subtitle">{{ page.subtitle }}</h2>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content container">
+    {{ content }}
+
+    <div class="code-tags">
+      <code> {{ page.tags }} </code>
+    </div>
+    </br>
+    {% if page.source_code %}
+      <a type="button" class="code-button" href="{{ page.source_code }}" target="_blank">Source code</a>
+    {% endif %}
+  </div>
+
+
+</article>

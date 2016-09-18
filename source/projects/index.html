@@ -1,0 +1,45 @@
+---
+layout: default
+title: Projects
+subtitle: Choose a job you love, and you will never have to work a day in your life. -Confucius
+paginate:
+  collection:   projects
+  per_page:     10
+---
+
+<section class="post-list">
+
+  <header class="post-header intro">
+    <div class="intro-in">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <h2 class="intro-subtitle">{{ page.subtitle }}</h2>
+      {% endif %}
+    </div>
+  </header>
+
+  {% for post in paginator.projects %}
+
+    <article class="post-item container">
+      <header>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h1 class="post-title">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h1>
+      </header>
+
+      <p>{{ post.content | strip_html | truncatewords: 200 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
+
+      <div class="code-tags">
+        <code> {{ post.tags }} </code>
+      </div>
+      </br>
+      {% if post.source_code %}
+        <a type="button" class="code-button" href="{{ post.source_code }}" target="_blank">Source code</a>
+      {% endif %}
+      </article>
+  {% endfor %}
+
+  {% include pagination.html %}
+
+</section>

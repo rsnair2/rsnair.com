@@ -16,9 +16,6 @@ permalink   : pretty
 markdown    : kramdown
 highlighter : pygments
 
-# pagination
-paginate: 5
-
 # SEO settings
 title: dotX
 description: ""
@@ -27,8 +24,12 @@ keywords: "personal blog, rajiv nair, engineering, science, politics, design, sy
 # Site settings
 url: 
 baseurl: ""
-# baseurl: ""
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  
 # Author settings
 author:
   name      : Rajiv Nair
@@ -47,3 +48,6 @@ repo:
 
 # comments
 disqus_shortname: "rsnair2"
+
+gems:
+  - octopress-paginate
